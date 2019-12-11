@@ -1,11 +1,13 @@
 def prime?(num)
-  s = num.to_s
-  if a.include?(num) || s.end_with?("7")
+if num > 2
+    array = (2...num).to_a
+    array.each do |x|
+      return false if num % x == 0
+    end
     return true
-  elsif s.end_with?("5") || num % 2 == 0 || num < 0
+  elsif num < 2
     return false
   else
-    false
+    return true
   end
-
 end
